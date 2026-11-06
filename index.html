@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GULSHAN AI</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#09111f;color:white;font-family:Arial;padding:18px}
+header{padding:20px 0;border-bottom:1px solid #34445c}
+h1{color:#36d6c4}
+.card{background:#17243a;padding:20px;border-radius:14px;margin-top:18px}
+select,button{width:100%;padding:14px;margin-top:12px;border:0;border-radius:8px;font-size:16px}
+select{background:#263750;color:white}
+button{background:#087e79;color:white;font-weight:bold}
+.signal{text-align:center;font-size:25px;font-weight:bold;padding:25px}
+.up{color:#35dc88}
+.down{color:#ff6575}
+.small{color:#aab8cc;font-size:13px;line-height:1.6}
+</style>
+</head>
+<body>
+<header>
+<h1>GULSHAN AI</h1>
+<div class="small">SMART MARKET ANALYZER</div>
+</header>
+
+<div class="card">
+<h3>SELECT MARKET</h3>
+<select id="pair">
+<option>EUR/USD</option>
+<option>GBP/USD</option>
+<option>USD/JPY</option>
+<option>EUR/JPY OTC</option>
+<option>USD/ZAR OTC</option>
+<option>CAD/CHF OTC</option>
+</select>
+<button onclick="showDemo()">GENERATE DEMO</button>
+</div>
+
+<div class="card">
+<h3>MARKET SIGNAL</h3>
+<div id="signal" class="signal">WAITING</div>
+<div id="info" class="small">Demo mode. No live market data connected.</div>
+</div>
+
+<div class="card">
+<h3>TECHNICAL ANALYSIS</h3>
+<p>EMA 9: Not connected</p>
+<p>EMA 21: Not connected</p>
+<p>RSI 14: Not connected</p>
+<p>MACD: Not connected</p>
+</div>
+
+<div class="card">
+<h3>IMPORTANT</h3>
+<p class="small">This is a design demo only. It does not predict market prices or generate verified trading signals. Never use demo results for real-money trading.</p>
+</div>
+
+<script>
+function showDemo(){
+document.getElementById("signal").innerText="NO TRADE";
+document.getElementById("signal").className="signal";
+document.getElementById("info").innerText=
+"DEMO ONLY | "+document.getElementById("pair").value+
+" | Live market data is not connected.";
+}
+</script>
+</body>
+</html>
